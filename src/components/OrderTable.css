@@ -1,0 +1,122 @@
+.orders-card {
+  padding: 24px;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.orders-title {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.orders-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.orders-search-wrapper {
+  position: relative;
+  min-width: 200px;
+}
+
+.orders-search-input {
+  padding: 8px 12px 8px 36px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.orders-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dark);
+  pointer-events: none;
+}
+
+.status-filter-select {
+  padding: 8px 12px;
+  background: var(--bg-dark-800);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.status-filter-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.status-dropdown {
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.status-dropdown.pending {
+  color: var(--accent);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.status-dropdown.delivered {
+  color: var(--secondary);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.status-dropdown.cancelled {
+  color: var(--danger);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.delete-order-btn {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-order-btn:hover {
+  color: var(--danger);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+@media (max-width: 768px) {
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .orders-controls {
+    width: 100%;
+  }
+  
+  .orders-search-wrapper {
+    flex-grow: 1;
+  }
+}

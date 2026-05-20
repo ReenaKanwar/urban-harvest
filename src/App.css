@@ -1,0 +1,31 @@
+.app-container {
+  min-height: 100vh;
+  background-color: var(--bg-dark-950);
+  color: var(--text-primary);
+  display: flex;
+}
+
+.main-content-wrapper {
+  flex-grow: 1;
+  margin-left: 260px; /* Width of the sidebar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(56, 189, 248, 0.03) 0%, transparent 50%),
+              var(--bg-dark-950);
+  transition: margin-left var(--transition-normal);
+}
+
+.page-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+  .main-content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
